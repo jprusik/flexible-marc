@@ -13,6 +13,7 @@ h5,
 h6 {
   font-weight: 300;
   line-height: 1.1;
+  margin: 1.5em 0 0 0;
 }
 
 h1{
@@ -47,6 +48,9 @@ body {
   font-family: @sans;
   font-size: 1.02em;
   line-height: 1.2em;
+  * {
+    transition: all 100ms;
+  }
 }
 
 a {
@@ -56,6 +60,10 @@ a {
 
 a:hover {
   color: @link-hover-color;
+}
+
+p {
+  margin:0.25em 0;
 }
 
 hr {
@@ -75,6 +83,10 @@ aside {
   background-color: @sidebar-bg;
   color: @sidebar-text-color;
   text-align: center;
+  text-transform: capitalize;
+  position:relative;
+  border-bottom: 1px solid @light-grey;
+  font-size: 0.75em;
 
   a {
     color: @sidebar-link-color;
@@ -85,12 +97,12 @@ aside {
   }
 
   div {
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     margin: 0;
 
     img {
       border-radius: 50%;
-      max-width: 140px;
+      max-width: 75px;
     }
 
     h1 {
@@ -101,15 +113,32 @@ aside {
       margin: 0 0 15px 0;
       font-size: .92em;
     }
+    &.nav-foot {
+      text-align:center;
+      line-height: 1.6em;
+      font-size: 0.9em;
+      text-transform:capitalize;
+      padding:10px 20px;
+
+      a {
+        &:hover {
+          color: @link-hover-color;
+        }
+      }
+    }
   }
 
   nav {
     ul {
       li {
+        text-align: left;
         display: inline;
         line-height: 1.6em;
         font-size: 1.28em;
-        text-transform: lowercase;
+        text-transform: capitalize;
+        :hover{
+          color: @light-orange;
+        }
       }
     }
   }
@@ -117,7 +146,6 @@ aside {
 
 main {
   nav {
-    text-align: center;
     text-transform: uppercase;
     font-size: .72em;
     padding: 14px 0 14px 0;
@@ -145,7 +173,15 @@ main {
   }
 
   article {
-    margin: 0 8% 2% 8%;
+    margin: 0 8% 50px 8%;
+
+    div.home-container{
+      vertical-align: middle;
+      text-align: justify;
+      display: block;
+      margin: 20px auto;
+      height: 100%;
+    }
 
     header {
       h1, h2 {
@@ -192,7 +228,7 @@ main {
       padding: .1em .6em;
       border: 1px solid rgba(63,63,63,0.25);
       box-shadow: 0 1px 0 rgba(63,63,63,0.25);
-      background-color: #fff;
+      background-color: @white;
       color: #333;
       border-radius: 3px;
       display: inline-block;
@@ -235,11 +271,16 @@ main {
   footer {
     padding-top: 4px;
     border-top: @footer-border-color 1px solid;
+    position: fixed;
+    width: inherit;
+    background: @white;
+    bottom: 0;
+    right: 0;
 
     p {
-      margin: 2px;
+      margin:auto;
       text-align: center;
-      padding: 0 40px 0 40px;
+      padding: 0;
       color: @footer-text-color;
       font-size: 11px;
     }
@@ -330,7 +371,7 @@ ul.list {
 
 ul.social {
   font-size: 1.6em;
-  padding-top: 20px;
+  padding-top: 0;
 
   li {
     display: inline;
@@ -338,8 +379,7 @@ ul.social {
 
   a:hover {
     z-index: 2;
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
+    color: @white !important;
   }
 
   a {
@@ -350,58 +390,100 @@ ul.social {
     text-align: center;
     font-size: .8em;
     line-height: 36px;
+    background-color: @white;
+    border-width:1px;
+    border-style:solid;
   }
 
   a.sc-facebook {
-    background-color: @facebook-bg-color;
+    color: @facebook-bg-color;
+    &:hover{
+      background-color: @facebook-bg-color;
+    }
   }
 
   a.sc-google {
-    background-color: @google-bg-color;
+    color: @google-bg-color;
+    &:hover{
+      background-color: @google-bg-color;
+    }
   }
 
   a.sc-pinterest {
-    background-color: @pinterest-bg-color;
+    color: @pinterest-bg-color;
+    &:hover{
+      background-color: @pinterest-bg-color;
+    }
   }
 
   a.sc-linkedin {
-    background-color: @linkedin-bg-color;
+    color: @linkedin-bg-color;
+    &:hover{
+      background-color: @linkedin-bg-color;
+    }
   }
 
   a.sc-rss {
-    background-color: @rss-bg-color;
+    color: @rss-bg-color;
+    &:hover {
+      background-color: @rss-bg-color;
+    }
   }
 
   a.sc-stack-overflow {
-    background-color: @stack-overflow-bg-color;
+    color: @stack-overflow-bg-color;
+    &:hover {
+      background-color: @stack-overflow-bg-color;
+    }
   }
 
   a.sc-twitter {
-    background-color: @twitter-bg-color;
+    color: @twitter-bg-color;
+    &:hover {
+      background-color: @twitter-bg-color;
+    }
   }
 
   a.sc-youtube {
-    background-color: @youtube-bg-color;
+    color: @youtube-bg-color;
+    &:hover{
+      background-color: @youtube-bg-color;
+    }
   }
 
   a.sc-github, a.sc-github-alt {
-    background-color: @github-bg-color;
+    color: @github-bg-color;
+    &:hover{
+      background-color: @github-bg-color;
+    }
   }
 
   a.sc-envelope-o {
-    background-color: @email-bg-color;
+    color: @email-bg-color;
+    &:hover{
+      background-color: @email-bg-color;
+    }
   }
 
   a.sc-reddit {
-    background-color: @reddit-bg-color;
+    color: @reddit-bg-color;
+    &:hover{
+      background-color: @reddit-bg-color;
+    }
+  }
+
+  a.sc-behance {
+    color: @dark-grey;
+    &:hover{
+      background-color: @dark-grey;
+    }
   }
 
   a.sc-soundcloud {
-    background-color: @soundcloud-bg-color;
-  }
-
-  a.sc-gitlab {
-    background-color: @gitlab-bg-color;
+    color: @soundcloud-bg-color;
+    &:hover{
+      background-color: @soundcloud-bg-color;
+    }
   }
 }
 
@@ -426,14 +508,30 @@ ul.social {
 @media screen and (min-width: 768px) {
   aside {
     width: 25%;
-    height: 100%;
+    height: 90%;
     position: fixed;
-    top: 0;
+    top: 5%;
     left: 0;
     overflow-y: auto;
+    border-right: 2px solid @sidebar-right-border-color;
+    border-bottom: none;
+    box-shadow: none;
+    font-size: 1em;
 
     div {
       padding: 36px 18px;
+
+      &.nav-foot {
+        text-align:left;
+        position:absolute;
+        bottom:0;
+        left:0;
+        padding:0 18px;
+      }
+
+      img {
+        max-width: 140px;
+      }
 
       nav {
         ul {
@@ -445,7 +543,7 @@ ul.social {
       }
 
       ul.social {
-        padding-top: 32px;
+        padding-bottom: 32px;
       }
     }
   }
@@ -459,8 +557,9 @@ ul.social {
 
     article {
 
-      &.single {
-        min-height: 80%;
+      div.home-container{
+        margin: 180px auto 0 auto;
+        line-height: 1.5em;
       }
 
       ul.list {

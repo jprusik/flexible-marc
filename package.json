@@ -1,7 +1,7 @@
 {
-  "name": "flex",
-  "version": "2.1.0",
-  "description": "A minimalist Pelican theme",
+  "name": "flexible-marc",
+  "version": "1.0.0",
+  "description": "An even more minimalist Pelican theme, based on Flex",
   "main": "gulpfile.js",
   "directories": {
     "test": "tests"
@@ -12,17 +12,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexandrevicenzi/Flex.git"
+    "url": "git+https://github.com/jprusik/flexible-marc.git"
   },
   "keywords": [
     "pelican"
   ],
-  "author": "Alexandre Vicenzi",
+  "author": "Jonathan Prusik",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexandrevicenzi/Flex/issues"
+    "url": "https://github.com/jprusik/flexible-marc/issues"
   },
-  "homepage": "https://github.com/alexandrevicenzi/Flex#readme",
+  "homepage": "https://github.com/jprusik/flexible-marc#readme",
   "dependencies": {
     "font-awesome": "^4.6.1",
     "gulp": "^3.9.0",

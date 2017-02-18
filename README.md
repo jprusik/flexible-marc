@@ -1,4 +1,4 @@
-The ultra-minimalist [Pelican](http://blog.getpelican.com/) theme forked from [Flex](https://github.com/jprusik/flexible-marc/).
+The ultra-minimalist [Pelican](http://blog.getpelican.com/) theme forked from [Flex](https://github.com/alexandrevicenzi/Flex).
 
 ## Features
 

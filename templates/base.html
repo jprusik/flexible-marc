@@ -117,14 +117,6 @@
     {% include "partial/ga.html" %}
   {% endif %}
 
-  {% if GUAGES %}
-    {% include "partial/guages.html" %}
-  {% endif %}
-
-  {% if PIWIK_URL and PIWIK_SITE_ID %}
-    {% include "partial/piwik.html" %}
-  {% endif %}
-
   {% include "partial/jsonld.html" %}
 
   {% block additional_js %}{% endblock %}
